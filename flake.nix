@@ -18,7 +18,7 @@
   };
 
   outputs = { self, nixpkgs, nixpkgs-stable, flake-utils, crane, ... }: let
-    supportedSystems = flake-utils.lib.defaultSystems ++ [ "riscv64-linux" ];
+    supportedSystems = flake-utils.lib.defaultSystems ++ [ "riscv64-linux" "powerpc64le-linux" ];
 
     makeCranePkgs = pkgs: let
       craneLib = crane.mkLib pkgs;
